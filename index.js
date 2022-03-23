@@ -1,7 +1,7 @@
 const express = require("express");
 const path = require("path");
 const app = express();
-const port = 80;
+const port = process.env.PORT || 8000;
 
 app.get('/', (req, res) => {
     if (req.query.format && req.query.url) {
